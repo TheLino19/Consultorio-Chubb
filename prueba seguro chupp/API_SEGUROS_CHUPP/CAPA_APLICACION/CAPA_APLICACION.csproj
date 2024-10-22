@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ClosedXML" Version="0.104.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CAPA_DOMINIO\CAPA_DOMINIO.csproj" />
+    <ProjectReference Include="..\CAPA_INFRASTRUCTURA\CAPA_INFRASTRUCTURAS.csproj" />
+  </ItemGroup>
+
+</Project>

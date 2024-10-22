@@ -1,0 +1,52 @@
+<div class="d-flex flex-column">
+  <div class="d-flex flex-row">
+    <form [formGroup]="clienteForm" (ngSubmit)="onRegister()">
+      <fieldset  class="d-flex flex-column ms-5 mt-3 align-items-start ">
+        <legend>Registrar Cliente</legend>
+        <div class="mb-3">
+          <i class="bi bi-credit-card-2-back"></i>
+          
+          <label for="disabledTextInput" class="form-label">Cedula</label>
+          <input type="text" id="disabledTextInput" class="form-control" placeholder="Ejem: 09857522" formControlName="cedula" [disabled]="isCedulaDisabled">
+        </div>
+        <div class="mb-3">
+          <i class="bi bi-person"></i>
+          <label for="disabledTextInput" class="form-label">Nombres</label>
+          <input type="text" id="disabledTextInput" class="form-control" placeholder="Ejem: Marcelo Zambrano" formControlName="nombres">
+        </div>
+        <div class="mb-3">
+          <i class="bi bi-phone"></i>
+          <label for="disabledTextInput" class="form-label">Telefono</label>
+          <input type="text" id="disabledTextInput" class="form-control" placeholder="Ejem: 0983810738" formControlName="telefono">
+        </div>
+        <div class="mb-3">
+          <i class="bi bi-calendar-minus"></i>
+          <label for="disabledTextInput" class="form-label">Edad</label>
+          <input type="text"class="form-control" placeholder="Ejem: 20"  formControlName="edad">
+        </div>
+        <button type="submit" class="btn btn-primary" [disabled]="clienteForm.invalid">Guardar</button>
+      </fieldset>
+    </form>
+    <div>
+      <div class=" ms-5 mt-3 d-flex ">
+        <div class="card">
+          <div class="card-header">
+            Disponibles
+          </div>
+          <div class="card-body">
+            <app-card-seguro [seguros]="seguros"></app-card-seguro>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header">
+      Seguros recien agregados
+    </div>
+    <div class="card-body">
+      
+    </div>
+  </div>
+  
+</div>
